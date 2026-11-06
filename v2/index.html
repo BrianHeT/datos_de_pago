@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://*.goatcounter.com; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Pagar por transferencia</title>
+  <link rel="stylesheet" href="../estilos.css">
+</head>
+<body data-vendedor="v2">
+  <main id="app">
+    <header class="encabezado">
+      <p class="etiqueta">Pagá por transferencia</p>
+      <h1 data-campo="nombre"></h1>
+    </header>
+
+    <section class="card">
+      <p class="campo-label">Alias</p>
+      <p class="alias" data-campo="alias"></p>
+      <button class="btn" type="button" data-copiar="alias">Copiar alias</button>
+    </section>
+
+    <section class="card">
+      <dl class="datos">
+        <div><dt>Titular</dt><dd data-campo="titular"></dd></div>
+      </dl>
+      <p class="advertencia" role="note">⚠️ Antes de confirmar la transferencia, verificá que el destinatario sea el titular indicado en esta página.</p>
+    </section>
+
+    <section class="card">
+      <p class="campo-label">Cómo pagar</p>
+      <ol class="pasos">
+        <li>Tocá <strong>Copiar alias</strong></li>
+        <li>Abrí la app de tu banco o billetera</li>
+        <li>Entrá a <strong>Transferir</strong> y pegá el alias</li>
+        <li>Ingresá el monto y confirmá</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <p class="campo-label">¿Tu app no acepta el alias? Usá el CVU</p>
+      <p class="cvu" data-campo="cvu"></p>
+      <button class="btn secundario" type="button" data-copiar="cvu">Copiar CVU</button>
+    </section>
+
+    <footer>Mostrale el comprobante al vendedor 🙌</footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Datos SOLO de este vendedor -->
+  <script src="datos.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

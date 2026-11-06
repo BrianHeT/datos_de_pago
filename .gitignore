@@ -1,0 +1,19 @@
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Nunca subir: secretos, borradores y datos privados
+.env
+*.env
+*.key
+*.pem
+secretos/
+privado/
+borradores/
+*.local.*
+
+# Archivos generados
+*.zip
+*.log
